@@ -1,4 +1,4 @@
-﻿#include "Application.h"
+#include "Application.h"
 
 Application::Application(HINSTANCE hInstance) : m_hInstance(hInstance)
 {
@@ -6,12 +6,12 @@ Application::Application(HINSTANCE hInstance) : m_hInstance(hInstance)
 
 bool Application::Initialize(HINSTANCE hInstance, int width, int height)
 {
-	// 테스트용 에러메시지
+	// 에러메시지
 	if (!m_window.Create(m_hInstance, width, height, L"DX11 Engine")) 
-	{
-		MessageBox(nullptr, L"Window::Create 실패", L"Error", MB_OK);
 		return false;
-	}
+	
+	if (!m_gfx.Initialize(m_window.GetHWND(), width, height))
+		return false;
 
 	m_running = true;
 	return true;
@@ -25,6 +25,7 @@ int Application::Run()
 			break;
 
 		// Update/Render
+		Render();
 	}
 
 	return 0;
@@ -36,4 +37,9 @@ void Application::Update(float deltaTime)
 
 void Application::Render()
 {
+	m_gfx.BeginFrame(1.0f, 1.0f, 1.0f, 1.0f);
+
+	// 메쉬 Draw
+
+	m_gfx.EndFrame();
 }
