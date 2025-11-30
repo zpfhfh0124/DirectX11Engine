@@ -1,4 +1,4 @@
-#include "Window.h"
+ï»¿#include "Window.h"
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
@@ -32,7 +32,7 @@ bool Window::Create(HINSTANCE hInstance, int width, int height, const wchar_t* t
 
     if (!RegisterClassEx(&wc))
     {
-        MessageBox(nullptr, L"RegisterClassEx ½ÇÆÐ", L"Error", MB_OK);
+        MessageBox(nullptr, L"RegisterClassEx ì‹¤íŒ¨", L"Error", MB_OK);
         return false;
     }
 
@@ -55,7 +55,7 @@ bool Window::Create(HINSTANCE hInstance, int width, int height, const wchar_t* t
 
     if (!m_hWnd)
     {
-        MessageBox(nullptr, L"CreateWindowEx ½ÇÆÐ", L"Error", MB_OK);
+        MessageBox(nullptr, L"CreateWindowEx ì‹¤íŒ¨", L"Error", MB_OK);
         return false;
     }
 

@@ -1,4 +1,4 @@
-#include "Application.h"
+ï»¿#include "Application.h"
 
 Application::Application(HINSTANCE hInstance) : m_hInstance(hInstance)
 {
@@ -6,10 +6,10 @@ Application::Application(HINSTANCE hInstance) : m_hInstance(hInstance)
 
 bool Application::Initialize(HINSTANCE hInstance, int width, int height)
 {
-	// Å×½ºÆ®¿ë ¿¡·¯¸Ş½ÃÁö
+	// í…ŒìŠ¤íŠ¸ìš© ì—ëŸ¬ë©”ì‹œì§€
 	if (!m_window.Create(m_hInstance, width, height, L"DX11 Engine")) 
 	{
-		MessageBox(nullptr, L"Window::Create ½ÇÆĞ", L"Error", MB_OK);
+		MessageBox(nullptr, L"Window::Create ì‹¤íŒ¨", L"Error", MB_OK);
 		return false;
 	}
 
