@@ -2,6 +2,8 @@
 
 bool Shader::Initialize(GraphicsDevice* device, const wstring& vsPath, const wstring& psPath)
 {
+
+
 	return false;
 }
 

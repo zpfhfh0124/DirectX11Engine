@@ -24,7 +24,8 @@ bool Application::Initialize(HINSTANCE hInstance, int width, int height)
 	};
 	vector<uint32_t> indices = { 0,1,2 };
 
-	m_triangle.Initialize(&m_gfx, vertices, indices);
+	if (!m_triangle.Initialize(&m_gfx, vertices, indices))
+		return false;
 
 	m_running = true;
 	return true;
