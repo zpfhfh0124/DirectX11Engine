@@ -28,6 +28,9 @@
     <Filter Include="Engine\App">
       <UniqueIdentifier>{79c217a4-c4a6-420b-a777-e98b438ad872}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Engine\Shaders">
+      <UniqueIdentifier>{f7f1d7ea-6be6-4815-a567-2ef792a7ba4d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
