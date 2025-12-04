@@ -57,6 +57,9 @@
     <ClCompile Include="Renderer.cpp">
       <Filter>Engine\Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Engine\Core</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -79,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="Renderer.h">
       <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Engine\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

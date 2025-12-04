@@ -13,7 +13,7 @@ bool Application::Initialize(HINSTANCE hInstance, int width, int height)
 	if (!m_gfx.Initialize(m_window.GetHWND(), width, height))
 		return false;
 
-	if (!m_renderer.Initialize(&m_gfx))
+	if (!m_renderer.Initialize(&m_gfx, width, height))
 		return false;
 
 	// 삼각형 mesh 하나 생성
