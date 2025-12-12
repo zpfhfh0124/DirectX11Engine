@@ -42,12 +42,12 @@ void Renderer::BeginFrame()
 	m_device->BeginFrame(0.1f, 0.1f, 0.1f, 1.0f);
 }
 
-void Renderer::DrawMesh(const Mesh& mesh)
+void Renderer::DrawMesh(const Mesh& mesh, const DirectX::XMMATRIX& world)
 {
 	auto ctx = m_device->GetContext();
 
 	// 월드/뷰/프로젝션 행렬 조합
-	XMMATRIX world = XMMatrixIdentity(); // 단위 행렬
+	//XMMATRIX world = XMMatrixIdentity(); // 단위 행렬
 	XMMATRIX view = m_camera.GetView();
 	XMMATRIX proj = m_camera.GetProj();
 	XMMATRIX wvp = world * view * proj;

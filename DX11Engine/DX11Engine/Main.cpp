@@ -12,7 +12,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	_In_ int nCmdShow) 
 {
 	Application app(hInstance);
-	if (!app.Initialize(hInstance, 1920, 1080))
+	if (!app.Initialize(1920, 1080))
 		return -1;
 
 	return app.Run();

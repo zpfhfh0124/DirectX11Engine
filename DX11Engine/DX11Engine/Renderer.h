@@ -17,7 +17,7 @@ public:
 
 	void BeginFrame();
 	void EndFrame();
-	void DrawMesh(const Mesh& mesh);
+	void DrawMesh(const Mesh& mesh, const DirectX::XMMATRIX& world);
 
 	Camera& GetCamera() { return m_camera; }
 
